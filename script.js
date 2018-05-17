@@ -12,18 +12,16 @@ app.get('/getNote', function (req, res) {
         if (err) throw err;
         stringifyFile = JSON.parse(data);
         res.send(data);
-        app.post('/updateNote/:note', function (req, res) {
-            stringifyFile['note'] = req.params.note;
-            fs.writeFile('./test.json',JSON.stringify(stringifyFile),function (err) {
-                if (err) throw err;
-                console.log('file updated');
-            });
-        });
     })
 });
 
-
-
+app.post('/updateNote/:note', function (req, res) {
+    stringifyFile['note'] = req.params.note;
+    fs.writeFile('./test.json',JSON.stringify(stringifyFile),function (err) {
+        if (err) throw err;
+        console.log('file updated');
+    });
+});
 
 app.listen(3000);
 
