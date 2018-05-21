@@ -1,0 +1,9 @@
+doctype html
+html
+    head
+        title="Home Page"
+    body
+        if(user_name === user.name && user_pwd === user.password)
+            h1 Hello, #{user.name}
+        else
+            a(href='/login') Return to Log In Page
