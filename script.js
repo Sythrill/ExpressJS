@@ -23,5 +23,9 @@ app.post('/updateNote/:note', function (req, res) {
     });
 });
 
+app.use(function (req, res, next) {
+    res.status(404).send('404 404 404 !!! Nie znam takiej strony !#$')
+});
+
 app.listen(3000);
 
