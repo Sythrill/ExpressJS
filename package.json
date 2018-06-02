@@ -19,6 +19,8 @@
   "homepage": "https://github.com/Sythrill/ExpressJS#readme",
   "dependencies": {
     "body-parser": "^1.18.3",
-    "express": "^4.16.3"
+    "bootstrap": "^4.1.1",
+    "express": "^4.16.3",
+    "pug": "^2.0.3"
   }
 }
