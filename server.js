@@ -1,14 +1,12 @@
 var express = require('express');
 var app = express();
 
-
 app.set('view engine', 'pug');
 app.set('views', './views');
 
 app.get('/login', function (req, res) {
     res.render('login');
 });
-
 
 app.get('/user', function (req, res) {
     res.render('user', {

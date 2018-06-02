@@ -1,0 +1,13 @@
+.form-group{
+    margin: 10px;
+}
+
+#name, #paswd {
+    padding: 5px;
+}
+
+button {
+    width: 100px;
+    height: 30px;
+    background: green;
+}

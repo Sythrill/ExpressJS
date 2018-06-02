@@ -2,12 +2,14 @@ doctype html
 html
     head
         title='Simple logIn page'
+        style
+            include ../style/login.css
     body
         form(method='GET' action='/user')
-            div.form-group(style={margin: '10px'})
+            div.form-group
                 label(for='name') Name:
-                input#name(type='text', placeholder='user name' name='name' style={padding: '5px'})
-            div.form-group(style={margin: '10px'})
+                input#name(type='text', placeholder='user name' name='name')
+            div.form-group
                 label(for='paswd') Password:
-                input#paswd(type='password' placeholder='password' name='password' style={padding: '5px'})
-            button(type='submit' style={width: '100px', height: '30px', background: 'green'}) Sign In
+                input#paswd(type='password' placeholder='password' name='password')
+            button(type='submit') Sign In
