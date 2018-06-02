@@ -1,10 +1,9 @@
-var express = require('express');
-var passport = require('passport');
-var GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
-var config = require('./config');
-var app = express();
-var googleProfile = {};
-
+const express = require('express');
+const passport = require('passport');
+const GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
+const config = require('./config');
+const app = express();
+let googleProfile = {};
 
 app.set('view engine', 'pug');
 app.set('views', './views');
@@ -37,7 +36,6 @@ passport.use(new GoogleStrategy({
 app.get('/login', function (req, res) {
     res.render('login', {user: req.user});
 });
-
 
 app.get('/user', function (req, res) {
     res.render('user', {user: googleProfile.displayName});
